@@ -1,11 +1,13 @@
 import React from 'react';
 import NavBar from '../components/NavBar';
+import ContactForm from '../components/ContactForm';
+
 
 function Contact() {
   return (
     <>
     <NavBar />
-    <div className='text-dark text-center'>Contact Us</div>
+    <ContactForm />
     </>
   )
 }

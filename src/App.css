@@ -27,6 +27,34 @@ body {
   text-align: center;
   text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #64f05a, 0 0 20px #5bf450, 0 0 25px #49f73d, 0 0 30px #34f026, 0 0 35px #19f20a;
 }
+
+.review-header {
+  text-align: center;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #64f05a, 0 0 20px #5bf450, 0 0 25px #49f73d, 0 0 30px #34f026, 0 0 35px #19f20a;
+}
+
+.bg-review {
+  background-color: #282c34b5;
+  border-radius: 10px;
+  color: azure;
+}
+
+.review-label{
+  background-color: #53525290;
+  color: #3cf14e;
+  border-radius: 5px;
+  text-shadow: 0 0 5px black;
+}
+
+.contactform {
+  background-color: #282c3463;
+  border-radius: 5px;
+  padding: 1rem;
+}
+
+.contact-header {
+  color: #153913;
+}
 /* .App-header {
   background-color: #282c34;
   min-height: 100vh;

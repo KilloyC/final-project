@@ -12,7 +12,7 @@ function RiddleCards({questions, getFetch}) {
         //console.log(userAnswer);
 
     /**
-     * need to find a way to clear the input field, and reset the show correct answer button to hide the answers. Right now will only reset after reload.
+     * need to find a way to reset the show correct answer button to hide the answers. Right now will only reset after reload.
      */
 
     const showCorrectAnswer = () => {
@@ -20,15 +20,17 @@ function RiddleCards({questions, getFetch}) {
     }
 
     const handleSubmitClick = () => {
-        if(userAnswer === answer) {
-            alert("Well done! Thats the correct answer!")
+        if(userAnswer.toLocaleLowerCase() === answer.toLocaleLowerCase()) {
+          alert("Well done! That is the right answer!")
         } else {
-            alert("Oh snap! Thats the wrong answer!")
+            alert("Oh snap! that is the wrong answer!")
         }
+        setUserAnswer('');
     }
 
     const getNewRiddle = () => {
         getFetch();
+        setUserAnswer('');
     }
 
   return (

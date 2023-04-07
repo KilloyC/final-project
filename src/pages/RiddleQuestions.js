@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import NavBar from '../components/NavBar';
 import RiddleCards from '../components/RiddleCards';
+import ReviewForm from '../components/ReviewForm';
 
 function RiddleQuestions() {
   const [questions, setQuestions] = useState([]);
@@ -22,8 +23,9 @@ function RiddleQuestions() {
   return (
     <>
     <NavBar />
-    <h1 className='riddle-header text-center mb-5 mt-3'>May The Odds Be Ever In Your Favor!</h1>
+    <h1 className='riddle-header text-center mb-5 mt-3'>Diddle diddle diddle, time for a riddle!</h1>
     <RiddleCards questions={questions} getFetch={getFetch} />
+    <ReviewForm />
     </>
   )
 }
