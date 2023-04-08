@@ -1,14 +1,16 @@
 .homeBtn {
-    margin: 0;
-    position: absolute;
-    top: 60%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
     color: azure;
-    text-align: center;
     text-shadow: 0 0 5px azure, 0 0 10px #fff, 0 0 15px #0073e6, 0 0 20px #0073e6, 0 0 25px #0073e6, 0 0 30px #0073e6, 0 0 35px #0073e6;
     border: 3px solid rgb(204, 244, 5);
+    margin-top: 2em;
+}
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+
 }
 
 .home-link {
@@ -17,30 +19,15 @@
 
 .font-text1 {
     font-size: 50px;
-    margin: 0;
-    position: absolute;
-    top: 30%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    color: #ffffff;
-    text-align: center;
     color:  rgb(6, 194, 182);
     animation: glow 1s ease-in-out infinite alternate;
 }
 
 .font-text2 {
-    font-size: 40px;
-    margin: 0;
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    color: #ffffff;
-    text-align: center;
+    font-size: 30px;
     text-shadow: 0 0 5px #0d0a0a, 0 0 10px #014f22, 0 0 15px #014f22, 0 0 20px #014f22, 0 0 25px #014f22, 0 0 30px #014f22, 0 0 35px #014f22;
     color:  rgb(6, 194, 182);
+    margin-top: .5em;
 }
 
 @keyframes glow {

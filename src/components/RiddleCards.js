@@ -7,28 +7,28 @@ import Form from 'react-bootstrap/Form';
 function RiddleCards({questions, getFetch}) {
     const [userAnswer, setUserAnswer] = useState('');
     const [showAnswer, setShowAnswer] = useState('');
+    const [checkAnswer, setCheckAnswer] = useState(false);
+    const [usersMadeAGuess, setUsersMadeAGuess] = useState(false);
     const {answer, riddle} = questions;
         //console.log(answer);
         //console.log(userAnswer);
-
-    /**
-     * need to find a way to reset the show correct answer button to hide the answers. Right now will only reset after reload.
-     */
 
     const showCorrectAnswer = () => {
         setShowAnswer(answer);
     }
 
     const handleSubmitClick = () => {
+        setUsersMadeAGuess(true);
         if(userAnswer.toLocaleLowerCase() === answer.toLocaleLowerCase()) {
-          alert("Well done! That is the right answer!")
+          setCheckAnswer(true);
         } else {
-            alert("Oh snap! that is the wrong answer!")
+            setCheckAnswer(false);
         }
         setUserAnswer('');
     }
 
     const getNewRiddle = () => {
+        setUsersMadeAGuess(false);
         getFetch();
         setUserAnswer('');
     }
@@ -42,6 +42,10 @@ function RiddleCards({questions, getFetch}) {
                 <Card.Title className='text-center' style={{color: 'azure'}}>❓ The Riddle ❓</Card.Title>
                     <Card.Text className='text-center' style={{color: 'azure'}}>
                         {riddle}
+
+                        {checkAnswer && usersMadeAGuess ? (
+                            <h3 className='mt-3'>you're right!</h3>
+                        ) : !checkAnswer && usersMadeAGuess ? (<h3 className='mt-3'>you're wrong!</h3>) : (<></>)}
                     </Card.Text>
                 <Form.Label htmlFor="userAnswer" style={{color: 'azure'}}>Your Answer</Form.Label>
                     <Form.Control

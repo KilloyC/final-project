@@ -9,6 +9,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  transform-origin: 50%;
   overflow-x: hidden;
 }
 
