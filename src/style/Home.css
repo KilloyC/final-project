@@ -39,3 +39,21 @@
     text-shadow: 0 0 5px #0d0a0a, 0 0 10px #014f22, 0 0 15px #014f22, 0 0 20px #014f22, 0 0 25px #014f22, 0 0 30px #014f22, 0 0 35px #014f22;
   }
 }
+
+@media (max-width: 820px) {
+  .font-text1 {
+    font-size: 30px;
+    font-family: 'Frijole', cursive;
+    color:  rgb(6, 194, 182);
+    animation: glow 1s ease-in-out infinite alternate;
+  }
+}
+
+@media (max-width: 820px) {
+  .font-text2 {
+    font-family: 'Frijole', cursive;
+    font-size: 12px;
+    text-shadow: 0 0 5px #0d0a0a, 0 0 10px #014f22, 0 0 15px #014f22, 0 0 20px #014f22, 0 0 25px #014f22, 0 0 30px #014f22, 0 0 35px #014f22;
+    color:  rgb(6, 194, 182);
+  }
+}

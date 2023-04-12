@@ -40,9 +40,9 @@ function ReviewForm() {
         userReview: newUserReview
       })
     }).then(() => {
+      getReviews();
       setNewReviewName('');
       setNewUserReview('');
-      getReviews();
     })
   }
 
@@ -64,11 +64,11 @@ function ReviewForm() {
     <Form>
       <Form.Group className="mb-1" controlId="Input1">
         <Form.Label className='review-label'>User Name</Form.Label>
-        <Form.Control type="text" placeholder="user name" onChange={(event) => setNewReviewName(event.target.value)} />
+        <Form.Control type="text" placeholder="user name" value={newReviewName} onChange={(event) => setNewReviewName(event.target.value)} />
       </Form.Group>
       <Form.Group className="mb-1" controlId="Textarea1">
         <Form.Label className='review-label'>Review/Comment</Form.Label>
-        <Form.Control as="textarea" rows={3} placeholder='text area' onChange={(event) => setNewUserReview(event.target.value)} />
+        <Form.Control as="textarea" rows={3} placeholder='text area' value={newUserReview} onChange={(event) => setNewUserReview(event.target.value)} />
       </Form.Group>
     </Form>
     <Button variant="contained" className='mt-2' color='success' onClick={(event) => createReview(event)}>Submit</Button>
