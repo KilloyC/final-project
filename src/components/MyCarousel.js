@@ -7,11 +7,12 @@ function MyCarousel() {
         <Carousel.Item>
             <img
                 className="d-block carousel"
-                src={require("../images/whatRiddle.jpg")}
+                src={require("../images/car-9.webp")}
+                style={{filter:'brightness(70%)'}}
                 alt="Second slide"
             />
 
-            <Carousel.Caption className='historyTriv'>
+            <Carousel.Caption className='genRiddle'>
                 <h3>What are Riddles</h3>
                 <p>A riddle is generally devised so as to require clever or unexpected thinking for its answer. Riddles may be considered a form of brain teaser, that makes them difficult to guess.</p>
             </Carousel.Caption>
@@ -19,11 +20,12 @@ function MyCarousel() {
         <Carousel.Item>
             <img
                 className="d-block carousel"
+                style={{filter:'brightness(50%)'}}
                 src={require("../images/history5.jpg")}
                 alt="Third slide"
             />
 
-            <Carousel.Caption className='sportsTriv'>
+            <Carousel.Caption className='histRiddle'>
                 <h3>History of Riddles</h3>
                 <p>
                 They are an ancient form of learning and entertainment. The first discovered written riddles are close to 4,000 years old. They were written in Cuneiform, the writing of the ancient Sumerians.

@@ -2,13 +2,21 @@
  box-sizing: border-box;
 }
 
-body {
+.nav-logo {
+  color: rgb(1, 51, 1);
+  font-size: x-large;
+  -webkit-text-stroke: .25px gold;
+}
+
+.page-bg {
   margin: 0;
   background-image: url(../src/images/green-riddle.jpg);
   background-position:center;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  background-color: rgba(0, 0, 0, 0.6);
+  background-blend-mode: multiply;
   transform-origin: 50%;
   overflow-x: hidden;
 }
@@ -26,23 +34,27 @@ body {
 
 .riddle-header {
   text-align: center;
-  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #64f05a, 0 0 20px #5bf450, 0 0 25px #49f73d, 0 0 30px #34f026, 0 0 35px #19f20a;
+  text-shadow: 0 0 5px #0d0a0a, 0 0 10px #014f22, 0 0 15px #014f22, 0 0 20px #014f22, 0 0 25px #014f22, 0 0 30px #014f22, 0 0 35px #014f22;
+  color:  rgb(6, 194, 182);
+  font-family: 'Frijole', cursive;
 }
 
 .review-header {
   text-align: center;
-  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #64f05a, 0 0 20px #5bf450, 0 0 25px #49f73d, 0 0 30px #34f026, 0 0 35px #19f20a;
+  text-shadow: 0 0 5px #0d0a0a, 0 0 10px #014f22, 0 0 15px #014f22, 0 0 20px #014f22, 0 0 25px #014f22, 0 0 30px #014f22, 0 0 35px #014f22;
+  color:  rgb(6, 194, 182);
+  font-family: 'Frijole', cursive;
 }
 
 .bg-review {
-  background-color: #282c34b5;
+  background-color: #025724b5;
   border-radius: 10px;
   color: azure;
 }
 
 .review-label{
   background-color: #53525290;
-  color: #3cf14e;
+  color: gold;
   border-radius: 5px;
   text-shadow: 0 0 5px black;
 }
@@ -54,15 +66,42 @@ body {
 }
 
 .contact-header {
-  color: #153913;
+  color:  rgb(6, 194, 182);
+  font-family: 'Frijole', cursive;
+  text-shadow: 0 0 5px #0d0a0a, 0 0 10px #014f22, 0 0 15px #014f22, 0 0 20px #014f22, 0 0 25px #014f22, 0 0 30px #014f22, 0 0 35px #014f22;
 }
-/* .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+.footer-container {
+  padding: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-} */
+  background-color: rgb(36, 238, 137);
+}
+
+.list-inline-item {
+  display: inline;
+  padding-right: .5em;
+  margin-left: 0.5em;
+  font-size: 25px;
+}
+
+.list-inline-item:hover {
+  padding: 2px 5px 2px 5px;
+  background-color: #2a3129;
+  border-radius: 10px;
+}
+
+.contact-icons {
+  color:  rgb(6, 194, 182);
+}
+
+.right {
+  color: gold;
+  text-align: center;
+}
+ .wrong {
+  color: red;
+  text-align: center;
+ }

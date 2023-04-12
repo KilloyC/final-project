@@ -8,7 +8,7 @@ function NavBar() {
   return (
     <Navbar expand="lg" style={{backgroundColor: 'rgb(36, 238, 137)'}}>
       <Container fluid>
-        <Navbar.Brand href="/">BrainRattle</Navbar.Brand>
+        <Navbar.Brand href="/" className='nav-logo'>BrainRattle</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav

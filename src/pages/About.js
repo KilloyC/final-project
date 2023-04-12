@@ -5,16 +5,19 @@ import { Link } from 'react-router-dom';
 import '../style/About.css';
 import AboutContent from '../components/AboutContent';
 import MyCarousel from '../components/MyCarousel';
+import Footer from '../components/Footer';
 
 function About() {
   return (
-    <>
+    <div className='page-bg'>
     <NavBar />
     <MyCarousel />
     <AboutContent />
-    <Link className='about-link' to='/riddleQuestions'><Button variant='success' className='about-btn mb-3 mt-3' size="lg">
-      Riddle Time!</Button></Link>
-    </>
+    <Link className='about-link' to='/riddleQuestions'><Button variant='outline-success' className='about-btn mb-3 mt-3' size="lg">
+      Riddle Time!</Button>
+    </Link>
+    <Footer />
+    </div>
   )
 }
 

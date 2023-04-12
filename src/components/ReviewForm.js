@@ -59,7 +59,7 @@ function ReviewForm() {
   }
 
   return (
-    <Container style={{marginTop: '300px'}}>
+    <Container style={{marginTop: '200px'}}>
       <h1 className='text-center mt-5 review-header'>Leave a review or comment below!</h1>
     <Form>
       <Form.Group className="mb-1" controlId="Input1">
@@ -71,7 +71,7 @@ function ReviewForm() {
         <Form.Control as="textarea" rows={3} placeholder='text area' onChange={(event) => setNewUserReview(event.target.value)} />
       </Form.Group>
     </Form>
-    <Button variant="contained" color='success' onClick={(event) => createReview(event)}>Submit</Button>
+    <Button variant="contained" className='mt-2' color='success' onClick={(event) => createReview(event)}>Submit</Button>
 
     <div className='bg-review my-5 p-2'>
       {reviewList.map((review, index) => (
