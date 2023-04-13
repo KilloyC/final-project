@@ -44,10 +44,11 @@
     height: 50vh;
 }
 
-@media (max-width: 250px) {
+@media (max-width: 280px) {
     .carousel {
-      width: 100vh;
-      height: auto;
+    width: 100vh;
+    height: 40vh;
+    font-size: 10px;
     }
 }
 

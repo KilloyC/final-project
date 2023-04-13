@@ -14,7 +14,7 @@ function RiddleCards({questions, getFetch}) {
         //console.log(userAnswer);
 
     const showCorrectAnswer = () => {
-        setShowAnswer(answer); //if time permits maybe figure out how to reset show answer button when get new riddle button is clicked.
+        setShowAnswer(answer);
     }
 
     const handleSubmitClick = () => {
@@ -31,6 +31,7 @@ function RiddleCards({questions, getFetch}) {
         setUsersMadeAGuess(false);
         getFetch();
         setUserAnswer('');
+        setShowAnswer('');
     }
 
   return (
