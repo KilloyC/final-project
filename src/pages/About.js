@@ -14,7 +14,7 @@ function About() {
     <MyCarousel />
     <AboutContent />
     <Link className='about-link' to='/riddleQuestions'><Button variant='outline-success' className='about-btn mb-3 mt-3' size="lg">
-      Riddle Time!</Button>
+      Riddle Time!</Button> {/* using Link tag to be able to navigate to the riddleQuestions page instead of an 'a' tag. */}
     </Link>
     <Footer />
     </div>

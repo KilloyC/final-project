@@ -7,8 +7,8 @@ function MyCarousel() {
         <Carousel.Item>
             <img
                 className="d-block carousel"
-                src={require("../images/car-9.webp")}
-                style={{filter:'brightness(70%)'}}
+                src={require("../images/car-9.webp")} //have to use require to get images to upload
+                style={{filter:'brightness(70%)'}} //adds a dark tint to the image
                 alt="Second slide"
             />
 

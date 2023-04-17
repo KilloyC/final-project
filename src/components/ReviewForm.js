@@ -15,6 +15,7 @@ function ReviewForm() {
   const [newUserReview, setNewUserReview] = useState('');
   //console.log(reviewList);
 
+  //re-renders with getReviews is called. using a dependency array to call it once.
   useEffect(() => {
     getReviews();
   }, [])
@@ -22,14 +23,15 @@ function ReviewForm() {
   const getReviews = () => {
     fetch(apiUrl)
       .then((data) => data.json()
-      .then((data) => setReviewList(data))
+      .then((data) => setReviewList(data)) //updating setReviewList with the data from the reviews api 
       )
   };
 
   const createReview = (event) => {
     //console.log(createReview);
-    event.preventDefault();
+    event.preventDefault(); //using this to stop the page from reloading because createReview is in a form.
 
+    //this is to create new reviews, and then clear the input fields, then re-render the page.
     fetch(apiUrl, {
       method: 'POST',
       headers: {
@@ -46,6 +48,7 @@ function ReviewForm() {
     })
   }
 
+  //takes in an id to identify which review to be delete from the array of reviews, then again calls the getReviews function
   const deleteReview = (id) => {
     fetch(`${apiUrl}/${id}`, {
         method: 'DELETE',
@@ -74,6 +77,7 @@ function ReviewForm() {
     <Button variant="contained" className='mt-2' color='success' onClick={(event) => createReview(event)}>Submit</Button>
 
     <div className='bg-review my-5 p-2'>
+      {/* mapping through the array of reviews to access the data to show on the page, which allows for creating, deleting, and updating reviews */}
       {reviewList.map((review, index) => (
         <div key={index}>
           {review.name}<br/>

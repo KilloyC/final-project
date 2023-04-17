@@ -26,7 +26,7 @@ function EditButton({apiUrl, getReviews, review}) {
     const [editUserReview, setEditUserReview] = useState('');
     const handleClose = () => setOpen(false);
 
-
+    //using the PUT method to update/edit the current reviews
     const editReview = (id) => {
         fetch(`${apiUrl}/${id}`, {
             method: 'PUT',
@@ -34,19 +34,19 @@ function EditButton({apiUrl, getReviews, review}) {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({
-                name: editReviewName,
+                name: editReviewName, //objects to be converted to JSON syntax
                 userReview: editUserReview
             })
         }).then(() => {
-            setEditReviewName('');
+            setEditReviewName(''); //resets the input fields after clicking the save button
             setEditUserReview('');
-            getReviews();
+            getReviews(); //used to re-render the page, getting all the reviews in the api
         })
     }
 
     const handleEditClick = (review) => {
         const handleOpen = () => setOpen(true);
-        setEditReviewName(review.name);
+        setEditReviewName(review.name); //populates the input fields in the modal with the name and review of the selected review
         setEditUserReview(review.userReview);
         handleOpen();
     }
@@ -64,13 +64,13 @@ function EditButton({apiUrl, getReviews, review}) {
     >
       <Box sx={style}>
         <Stack>
-        <TextField className='mb-3' id="outlined-basic" label="User Name" variant="outlined" value={editReviewName} onChange={(e) => setEditReviewName(e.target.value)}>
+        <TextField className='mb-3' id="outlined-basic" label="User Name" variant="outlined" value={editReviewName} onChange={(e) => setEditReviewName(e.target.value)}> {/* logs the changes being made in the input fields and updates the state in setEditReviewName and uses the state variable as its value*/}
           Text in a modal
         </TextField>
-        <TextField id="outlined-basic" label="Review" variant="outlined" value={editUserReview} onChange={(e) => setEditUserReview(e.target.value)}>
+        <TextField id="outlined-basic" label="Review" variant="outlined" value={editUserReview} onChange={(e) => setEditUserReview(e.target.value)}> {/* logs the changes being made in the input fields and updates the state in setEditUserReview and uses the state variable as its value*/}
           Text in a modal
         </TextField>
-        <Button onClick={() => editReview(review.id)}>Save</Button>
+        <Button onClick={() => editReview(review.id)}>Save</Button> {/* grabbing the review that matches its id */}
         <Button variant='tertiary' onClick={handleClose}>Close</Button>
         </Stack>
       </Box>

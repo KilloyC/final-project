@@ -5,7 +5,7 @@ import emailjs from '@emailjs/browser';
 import Swal from 'sweetalert2';
 
 function ContactForm() {
-    const form = useRef();
+    const form = useRef(); //using useRef to reference form in sendEmail and the form in the return section.
 
     const sendEmail = (e) => {
         e.preventDefault();
@@ -13,7 +13,7 @@ function ContactForm() {
         emailjs.sendForm("service_79vmovh", "template_1pb4q4t", form.current, "FwrqJPGdFow1iLlZU")
           .then((result) => {
                console.log(result.text);
-                Swal.fire({
+                Swal.fire({ //this is from the sweetalert2 library to style an alert to tell users if their email was sent successfully or not.
                     icon: 'success',
                     title: 'Message was sent successfully'
                 })
@@ -25,7 +25,7 @@ function ContactForm() {
                 text: error.text,
               })
           });
-          e.target.reset();
+          e.target.reset(); //using the event target to reset the form after clicking submit
       };
 
   return (
@@ -34,7 +34,7 @@ function ContactForm() {
             <h2 className="h1-responsive contact-header font-weight-bold text-center my-5 display-4">Contact Us</h2>
             <Row>
                 <Col className="col-md-9 mb-md-0 mb-5">
-                    <form ref={form} onSubmit={sendEmail}>
+                    <form ref={form} onSubmit={sendEmail}> {/* this is where the useRef will reference the form and where we call the function sendEmail by the event handler onSubmit */}
                         <Row>
                             <Col className="col-md-6 mb-2">
                                 <div className="md-form mb-0">
